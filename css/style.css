@@ -1,0 +1,327 @@
+/* *********************************** */
+/* *** ESTILOS GENERALES *** */
+/* *********************************** */
+
+/* Tipografía */
+@font-face {
+    font-family: "roadgeek";
+    src: url("../font/roadgeek.woff") format("woff");
+}
+
+:root
+{
+    --color-blanco: rgb(255, 255, 255);
+    --color-negro: rgb(0, 0, 0);
+    --color-naranja: rgb(255, 132, 0);
+    --color-azul: rgb(76, 0, 255);
+    
+}
+
+
+html
+{
+    font-family: "roadgeek", sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    color: var(--color-negro);
+
+    background-color: var(--color-blanco);
+    width: 100vw;
+    height: 100vh;
+
+    /* overflow-x: hidden; */
+    
+}
+
+
+
+.container
+{
+    display: grid;
+    grid-template-columns: 25% 75%;
+    /* grid-template-rows: 700px auto 150px; */
+    grid-template-areas: 
+    "i d"
+    ;
+
+    width: 100vw;
+    height: 100vh;
+    overflow-x: hidden;
+
+}
+
+.container__izquierda
+{
+    grid-area: i;
+    height: 100%;
+
+
+}
+
+.izquierda__ul
+{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+
+    grid-template-rows: 40px 1fr 1fr 1fr 1fr 1fr 1fr auto auto ;
+    grid-template-areas: 
+    ". . ."
+    "c . h"
+    ". . ."
+    ". . ."
+    ". t t"
+    ". . ."
+    ". . ."
+    
+    "i i i"
+    "i i i"
+    
+    ;
+    height: 100%;
+
+}
+
+
+.ul__icono
+{
+    grid-area: c;
+    align-self: flex-start;
+    justify-self: end;
+}
+
+.ul__hamburguesa
+{
+    grid-area: h;
+    align-self: flex-start;
+}
+
+
+.hamburguesa__img
+{
+    width: 52px;
+
+}
+
+.ul__texto
+{
+    grid-area: t;
+    min-width: 100%;
+
+}
+
+.texto__subtitulo
+{
+    /* padding-left: 50px; */
+    font-size: 1.2rem;
+    padding-right: 60px;
+}
+
+.texto__titulo
+{
+    font-size: 1.5rem;
+    font-weight: bolder;
+    letter-spacing: -2px;
+
+}
+
+.ul__imagen
+{
+    grid-area: i;
+}
+
+.imagen__imagen
+{
+    height: 100%;
+}
+
+.container__derecha
+{
+    grid-area: d;
+    
+
+}
+
+
+.derecha__ul
+{
+    background-image: url("../img/desktop/cielo.jpg");
+    background-size: cover;
+    background-position: top left;
+    background-repeat: no-repeat;
+    
+    width: 100%;
+    height: 100%;
+
+    display: grid;
+    grid-template-columns: 60px 1fr 1fr 1fr 1fr 20px ;
+    grid-template-rows: 20px 80px 1fr 70px 151px;
+    grid-template-areas: 
+    ". . . . . ."
+    ". h h h h ."
+    ". m m m m ."
+    ". . . . . ."
+    "x x x x x x"
+    
+    ;
+
+}
+
+
+.ul__header
+{
+    grid-area: h;
+}
+
+
+.ul__main
+{
+    grid-area: m;
+    width: 100%;
+    height: 100%;
+
+}
+
+.ul__footer
+{
+    grid-area: x;
+    width: 100%;
+    height: 150px;
+    
+}
+
+
+.header__superior
+{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+
+.elemento__texto
+{
+    font-size: 3rem;
+    font-weight: bolder;
+    color: white;
+    max-width: 400px;
+
+
+}
+
+
+.main__contenido
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 100%;
+    height: 100%;
+
+}
+
+.contenido__boton
+{
+    display: flex;
+    align-items: flex-end;
+}
+
+.boton__boton
+{
+    color: white;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 15px;
+}
+
+
+.footer__centro
+{
+    display: grid;
+    grid-template-columns: 1fr 1fr 0.1fr 1.6fr 0.2fr 1fr;
+    grid-template-areas: 
+    "x1 x1 x1 . x2 x2"
+    ;
+
+    /* background-color: red; */
+    /* z-index: 1; */
+    width: 100%;
+    height: 100%;
+
+}
+
+.footer__izquierda
+{
+    grid-area: x1;
+    background-color: white;
+    display: flex;
+
+}
+
+.footer__derecha
+{
+    grid-area: x2;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.izquierda__figure
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.derecha__derecha
+{
+    width: 100px;
+    height: 100px;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+
+.figure__texto
+{
+    width: 60%;
+}
+
+.figure__imagen
+{
+    border-radius: 50%;
+}
+
+
+
+
+.texto
+{
+    font-family: sans-serif;
+    font-size: 0.8rem;
+    font-weight: bolder;
+
+}
+
+.derecha__imagen-izq
+{
+    width: 30px;
+    height: 30px;
+}
+
+.derecha__imagen-der
+{
+    width: 30px;
+    height: 30px;
+}
+
+
