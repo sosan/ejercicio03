@@ -154,10 +154,11 @@ html
 
     display: grid;
     grid-template-columns: 60px 1fr 1fr 1fr 1fr 20px ;
-    grid-template-rows: 20px 80px 1fr 70px 151px;
+    grid-template-rows: 20px 50px 60px 1fr 70px 151px;
     grid-template-areas: 
     ". . . . . ."
     ". h h h h ."
+    ". . . . . ."
     ". m m m m ."
     ". . . . . ."
     "x x x x x x"
