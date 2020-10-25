@@ -13,7 +13,10 @@
     --color-blanco: rgb(255, 255, 255);
     --color-negro: rgb(0, 0, 0);
     --color-naranja: rgb(255, 132, 0);
-    --color-azul: rgb(76, 0, 255);
+    --color-azul: rgb(87, 131, 178);
+    --color-gris: rgb(56, 60, 59);
+    --color-azul-claro: rgb(232, 238, 238);
+    --color-gris-claro:rgb(142, 148, 148);
     
 }
 
@@ -326,3 +329,149 @@ html
 }
 
 
+
+
+.textos__columna
+/* .container-texto */
+{
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: 100px 80px 1fr;
+    grid-template-areas: 
+    ". . . . . ."
+    ". t t t t ."
+    ". c1 c1 c2 c2 ."
+
+    
+    ;
+
+
+}
+
+
+.columna__titulo
+{
+    grid-area: t;
+    
+}
+
+.titulo__textos
+{
+    font-size: 3rem;
+    color: black;
+}
+
+.columna__listado-1
+{
+    grid-area: c1;
+
+}
+
+.columna__listado-2
+{
+    grid-area: c2;
+    
+}
+
+.tabla__el
+{
+    color: grey;
+    text-transform: uppercase;
+    margin-bottom: 15px;
+
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 20px;
+}
+
+.tabla__el-selected
+{
+    color: var(--color-azul);
+
+}
+
+
+.elemento__link
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 6px;
+}
+
+
+.tabla__el-titulo
+{
+    font-weight: bolder;
+    color: var(--color-gris);
+    font-size: 1.5rem;
+
+}
+
+.fill__svgazul
+{
+    fill: var(--color-azul);
+
+}
+
+
+
+.container-grafico
+{
+    display: grid;
+    grid-template-columns: 100px 1fr;
+    grid-template-rows: 100px 300px;
+
+    grid-template-areas: 
+    ". ."
+    ". c"
+    ;
+
+}
+
+
+.grafico__graf
+{
+    grid-area: c;
+    background-color: var(--color-azul-claro);
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+
+}
+
+.graf__elemento
+{
+    width: 150px;
+    height: 220px;
+}
+
+.elemento__figure-graf
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+
+}
+
+.figure-graf__img
+{
+    width: 130px;
+}
+
+.figure-graf__texto
+{
+    font-size: 0.8rem;
+    text-align: center;
+    color: var(--color-gris-claro);
+    font-weight: bolder;
+
+}
